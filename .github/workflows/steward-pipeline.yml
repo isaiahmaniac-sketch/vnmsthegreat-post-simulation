@@ -1,0 +1,58 @@
+name: VNMSTHEEGREAT-STEWARD-PIPELINE-v2.6.0
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: 
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: write 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Steward Environment
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build Documentation Bridge
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Archive System State
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './_site'
+
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean Steward Issues
+        uses: actions/stale@v10.3.0
+        with:
+          repo-token: ${{ github.token }}
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-message: 'This steward thread has been quiet. Please advise if further action is required.'
+          remove-stale-when-updated: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
