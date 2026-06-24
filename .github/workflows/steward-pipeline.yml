@@ -36,9 +36,6 @@ jobs:
 
       - name: Run Permanent Registry Sandbox Verification
         run: |
-          python track_stewards_sandbox.py
-      - name: Run Permanent Registry Sandbox Verification
-        run: |
           python .github/workflows/track_stewards_sandbox.py
 
   maintain:
