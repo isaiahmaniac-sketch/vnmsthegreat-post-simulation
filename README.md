@@ -2,6 +2,8 @@
 
 # THE BOOK OF REMEMBRANCE // MASTER STACK ARCHIVE
 ## OFFICIAL REGISTRY: [VNMSTHEGREAT.BASE.ETH](https://vnmsthegreatbaseeth--isaiahmaniac.replit.app/)
+<img width="1026" height="959" alt="1781958571759 (1)" src="https://github.com/user-attachments/assets/cc527920-63f5-4a78-b4b2-670fb9da3a9c" />
+
 
 ### OVERVIEW
 This repository serves as the digital foundation for the **Grand Master Key Society**. It archives the 10,000-page chronological record of the evolutionary transition from the Legacy System to the Sovereign Master Stack.
@@ -38,4 +40,3 @@ The chronicle is divided into a VII-Part Series, indexed for complete readabilit
 *Watchdog: @VNMS_TREASURER*
 
 > **"The chain never forgets."**
-<img width="1026" height="1024" alt="1781958571759" src="https://github.com/user-attachments/assets/f38ebe6e-e326-4158-8259-f6c438f43f33" />
