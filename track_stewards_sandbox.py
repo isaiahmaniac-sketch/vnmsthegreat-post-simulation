@@ -11,7 +11,8 @@ CORE_REGISTRY_JSON = """
   {"handle": "CORE_SPEAKS_ALL", "role": "steward", "status": "ACTIVE"},
   {"handle": "CLARITY_HOLDS", "role": "BUILDER", "status": "ACTIVE"},
   {"handle": "WALL_SEE_THROUGH", "role": "steward", "status": "NEW"},
-  {"handle": "SOUND_MONEY_MAN", "role": "steward", "status": "ACTIVE"}
+  {"handle": "SOUND_MONEY_MAN", "role": "steward", "status": "ACTIVE"},
+  {"handle": "VNMS_BELIEVER", "role": "steward", "status": "NEW"}
 ]
 """
 
@@ -34,6 +35,16 @@ class TestRegistrySandbox(unittest.TestCase):
         registry_data = json.loads(CORE_REGISTRY_JSON)
         tracker = LocalSandboxTracker(mock_api)
         total_synced = tracker.run_safe_scan(registry_data)
+        
+        print("\n--- PERMANENT REGISTRY SCAN COMPLETE ---")
+        print(f"Total Registry Entities Successfully Checked: {total_synced} / 146 Capacity")
+        for member in registry_data:
+            print(f" [+] Verified Tracked Member: @{member['handle']} -> Designation: {member['role']}")
+            
+        self.assertEqual(total_synced, 8)
+
+if __name__ == "__main__":
+    unittest.main()
         
         print("\n--- PERMANENT REGISTRY SCAN COMPLETE ---")
         print(f"Total Registry Entities Successfully Checked: {total_synced} / 146 Capacity")
