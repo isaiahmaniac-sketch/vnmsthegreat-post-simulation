@@ -18,21 +18,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Steward Environment
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: true
+      # - name: Setup Steward Environment
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: '3.2'
+      #     bundler-cache: true
 
-      - name: Build Documentation Bridge
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
+      # - name: Build Documentation Bridge
+      #   run: bundle exec jekyll build
+      #   env:
+      #     JEKYLL_ENV: production
 
-      - name: Archive System State
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './_site'
+      # - name: Archive System State
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: './_site'
 
       - name: Run Permanent Registry Sandbox Verification
         run: |
@@ -49,14 +49,4 @@ jobs:
           days-before-close: 7
           stale-issue-message: 'This steward thread has been quiet. Please advise if further action is required.'
           remove-stale-when-updated: true
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          
