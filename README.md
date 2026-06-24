@@ -1,3 +1,4 @@
+<img width="389" height="388" alt="1782009348441 (1) (1)" src="https://github.com/user-attachments/assets/b004cba3-d9bd-4dc4-8c0c-f58da657ac0b" />
 # THE BOOK OF REMEMBRANCE // MASTER STACK ARCHIVE
 ## OFFICIAL REGISTRY: [VNMSTHEGREAT.BASE.ETH](https://vnmsthegreatbaseeth--isaiahmaniac.replit.app/)
 
