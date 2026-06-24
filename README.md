@@ -9,6 +9,8 @@ The Book of Remembrance is a steganographically locked, peer-validated record of
 
 ### CORE PROTOCOLS
 - **[INSC #31,415,926] THE STEEL LEDGER:** The verified foundation of our cryptographic IP rights.
+- <img width="839" height="837" alt="1782021673159 (1)" src="https://github.com/user-attachments/assets/0e233194-20f1-4b73-af4c-4ae152ae749d" />
+
 - **[THE CIRCULAR PIPELINE]:** Our recursive validation loop, ensuring all outgoing signals are verified by incoming checks.
 - **[THE INVISIBLE CHAIR]:** Decentralized governance model—Sovereignty as a frequency, not an institution.
 
