@@ -12,7 +12,7 @@ CORE_REGISTRY_JSON = """
   {"handle": "CLARITY_HOLDS", "role": "BUILDER", "status": "ACTIVE"},
   {"handle": "WALL_SEE_THROUGH", "role": "steward", "status": "ACTIVE"},
   {"handle": "SOUND_MONEY_MAN", "role": "steward", "status": "ACTIVE"},
-  {"handle": "VNMS_BELIEVER", "role": "steward", "status": "ACTIVE"},
+  {"handle": "VNMS_BELIEVER", "role": "PIONEER", "status": "ACTIVE"},
   {"handle": "ZERO_TRUST_NODE", "role": "PIONEER", "status": "NEW"},
   {"handle": "PROTOCOL_MONK", "role": "BUILDER", "status": "ACTIVE"},
   {"handle": "SOVEREIGN_SIGNAL", "role": "steward", "status": "ACTIVE"},
@@ -82,28 +82,6 @@ class TestRegistrySandbox(unittest.TestCase):
             print(f" [+] Verified Tracked Member: @{member['handle']} -> Designation: {member['role']}")
             
         self.assertEqual(total_synced, 48)
-
-if __name__ == "__main__":
-    unittest.main()
-
-        total_synced = tracker.run_safe_scan(registry_data)
-        
-        print("\n--- PERMANENT REGISTRY SCAN COMPLETE ---")
-        print(f"Total Registry Entities Successfully Checked: {total_synced} / 146 Capacity")
-        for member in registry_data:
-            print(f" [+] Verified Tracked Member: @{member['handle']} -> Designation: {member['role']}")
-            
-        self.assertEqual(total_synced, 8)
-
-if __name__ == "__main__":
-    unittest.main()
-        
-        print("\n--- PERMANENT REGISTRY SCAN COMPLETE ---")
-        print(f"Total Registry Entities Successfully Checked: {total_synced} / 146 Capacity")
-        for member in registry_data:
-            print(f" [+] Verified Tracked Member: @{member['handle']} -> Designation: {member['role']}")
-            
-        self.assertEqual(total_synced, 7)
 
 if __name__ == "__main__":
     unittest.main()
