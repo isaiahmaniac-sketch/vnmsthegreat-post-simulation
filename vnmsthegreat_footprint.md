@@ -44,11 +44,7 @@ The automated Master Agent stack has successfully executed the following network
   "identityCredentials": {
     "verifiedTreasurySigner": "jackhenrytreasury.cb.id",
     "stewardGateway": "vnmstheegreat.base44.app",
-    "stewardName": "VNMSTHEEGREAT™
-
-<img width="328" height="328" alt="vnmstheegreat-vnmsvypa" src="https://github.com/user-attachments/assets/ce03ccde-a252-4bec-a07b-38bc6a494aec" />
-
-"
+    "stewardName": "VNMSTHEEGREAT™"
   },
   "milestoneAchievements": [
     {
